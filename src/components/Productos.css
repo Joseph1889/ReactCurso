@@ -1,0 +1,47 @@
+.list-group-item.active {
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+.precio-anterior {
+    text-decoration: line-through;
+    color: var(--color1);
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+.porcentaje-descuento {
+    background-color: var(--color3);
+    position: absolute;
+    right: 0;
+    padding: 3px 7px;
+}
+.icono-vista-rapida {
+    background-color: #EEEEEE;
+    position: absolute;
+    padding: 11px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    right: -50px;
+    top: 20px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.icono-vista-rapida:hover {
+    background-color: var(--color3);
+}
+.card {
+    overflow: hidden;
+}
+.card:hover .icono-vista-rapida {
+    right: 20px;
+    opacity: 1;
+}
+#cards-productos img{
+    transition: all 0.5s ease-in-out;
+}
+#cards-productos img:hover{
+    transform: scale(1.2);    
+}
+.icono-carrito:hover{
+    color: var(--color1);
+    cursor: pointer;
+} 
