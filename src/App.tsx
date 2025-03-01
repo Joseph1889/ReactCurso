@@ -15,7 +15,7 @@ import Login from './pages/Login'
 import Directores from './pages/Directores'
 import Futbol from './pages/Futbol'
 import Pedidos from './pages/Pedidos'
-
+import PedidoDetalle from './pages/PedidoDetalle'
 
 function App() {
   return (
@@ -37,6 +37,7 @@ function App() {
             <Route path="/directores" element={<Directores />} />
             <Route path="/futbol" element={<Futbol />} />
             <Route path="/productodetalle/:idproducto" element={<ProductoDetalle />} />
+            <Route path="/pedidodetalle/:idpedido" element={<PedidoDetalle />} />
             <Route path="*" element={<Pagina404 />} /> {/* Si  la ruta no existe */}
           </Routes>
         </main>
