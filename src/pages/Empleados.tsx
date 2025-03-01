@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import PageHeader from "../components/PageHeader"
 import { Empleado } from "../types/Empleado"
-import { API_URL } from "../utils"
+import { agregarEmpleado, API_URL } from "../utils"
 
 function Empleados() {
 
@@ -43,6 +43,9 @@ function Empleados() {
                             <div className="card-body">
                                 <h5 className="card-title">{item.nombres} {item.apellidos}</h5>
                                 <p className="card-text">{item.cargo}</p>
+                                <i className="bi bi-person-raised-hand icono-carrito"
+                                    title="Añadir a seleccionados"
+                                    onClick={() => agregarEmpleado(item, 1)}> Seleccionar</i>
                             </div>
                         </div>
                     </div>

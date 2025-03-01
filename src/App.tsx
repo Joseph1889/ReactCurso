@@ -16,6 +16,7 @@ import Directores from './pages/Directores'
 import Futbol from './pages/Futbol'
 import Pedidos from './pages/Pedidos'
 import PedidoDetalle from './pages/PedidoDetalle'
+import Seleccionados from './pages/Seleccionados'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path='/pedidos' element={<Pedidos />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/seleccionados" element={<Seleccionados />} />
             <Route path="/directores" element={<Directores />} />
             <Route path="/futbol" element={<Futbol />} />
             <Route path="/productodetalle/:idproducto" element={<ProductoDetalle />} />

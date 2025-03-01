@@ -55,5 +55,11 @@ export const navListRight: NavItem[] = [
         url: "/carrito",
         tooltip: "Carrito de compras",
         icon: "bi bi-basket"
+    },
+    {
+        etiqueta: "Seleccionados",
+        url: "/seleccionados",
+        tooltip: "Empleados seleccionados",
+        icon: "bi bi-person-raised-hand"
     }
 ]
