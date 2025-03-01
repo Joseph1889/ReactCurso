@@ -1,0 +1,13 @@
+
+.icono-vista-rapida-proveedor {
+  font-size: 1.2rem;
+  color: #3c3c3c;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 1;  /* Asegurar que es visible */
+  position: static; /* Evita que se salga del flujo */
+}
+
+.icono-vista-rapida-proveedor:hover {
+  background-color: var(--color3);
+}
