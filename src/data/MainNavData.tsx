@@ -36,6 +36,11 @@ export const navList: NavItem[] = [
         url: "/tienda",
         tooltip: "Productos y servicios"
     },
+    {
+        etiqueta: "Pedidos",
+        url: "/pedidos",
+        tooltip: "Pedidos realizados"
+    },
 ]
 
 export const navListRight: NavItem[] = [

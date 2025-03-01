@@ -14,6 +14,7 @@ import Carrito from './pages/Carrito'
 import Login from './pages/Login'
 import Directores from './pages/Directores'
 import Futbol from './pages/Futbol'
+import Pedidos from './pages/Pedidos'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/proveedores" element={<Proveedores />} />
             <Route path="/empleados" element={<Empleados />} />
             <Route path="/tienda" element={<Tienda />} />
+            <Route path='/pedidos' element={<Pedidos />} />
             <Route path="/carrito" element={<Carrito />} />
             <Route path="/login" element={<Login />} />
             <Route path="/directores" element={<Directores />} />
