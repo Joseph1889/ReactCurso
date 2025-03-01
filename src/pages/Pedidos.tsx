@@ -7,7 +7,7 @@ function Pedidos() {
   const [listaPedidos, setListaPedidos] = useState<Pedido[]>([])
   const [listaPedidosFiltrados, setListaPedidosFiltrados] = useState<Pedido[]>([])
   const [filtro, setFiltro] = useState("")
-  const [filasPagina, ] = useState(10)
+  const [filasPagina, ] = useState(15)
   const [paginaActual, setPaginaActual] = useState(0)
   const [totalPaginas, setTotalPaginas] = useState(0)
   const [, setTotalFilas] = useState(0)
@@ -107,18 +107,25 @@ function Pedidos() {
   }
 
   const dibujarNumerosPagina = () => {
-      return (
-          //Array(totalPaginas).fill(0).map((item, index) =>
-          <>
-              {
-                  [...Array(totalPaginas)].map((_, index) =>
-                      <li className="page-item" key={index}><a onClick={() => setPaginaActual(index)}
-                          className={"page-link " + (index == paginaActual ? "active":"")} href="#">{index+1}</a></li>
-                  )
-              }
-          </>
-      )
-  }
+    const paginasPorBloque = 15;
+    const bloqueActual = Math.floor(paginaActual / paginasPorBloque);
+    const inicio = bloqueActual * paginasPorBloque;
+    const fin = Math.min(inicio + paginasPorBloque, totalPaginas);
+
+    return (
+        <>
+            {Array.from({ length: fin - inicio }, (_, i) => i + inicio).map((index) => (
+                <li className="page-item" key={index}>
+                    <a onClick={() => setPaginaActual(index)}
+                        className={`page-link ${index === paginaActual ? "active" : ""}`}
+                        href="#">
+                        {index + 1}
+                    </a>
+                </li>
+            ))}
+        </>
+    );
+};
 
   const retroceder = () => {
       if (paginaActual > 0) setPaginaActual(paginaActual - 1)
