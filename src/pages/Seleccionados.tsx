@@ -6,7 +6,7 @@ import { API_URL } from "../utils";
 function Seleccionados() {
 
   const [listaItems, setListaItems] = useState<ItemSeleccionado[]>([])
-  const [total, setTotal] = useState(0)
+  //const [total, setTotal] = useState(0)
 
   useEffect(() => {
     leerServicio()
@@ -57,7 +57,7 @@ function Seleccionados() {
   const vaciarCarrito = () => {
     sessionStorage.removeItem("seleccionados")
     setListaItems([])
-    setTotal(0)
+    //setTotal(0)
   }
 
   return (
